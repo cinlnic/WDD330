@@ -1,0 +1,9 @@
+/*Story Editor CSS*/
+input, textarea, section {
+   margin: 10px 0;
+}
+textarea {
+   width: 600px;
+   height: 250px;
+   background-color: lightyellow;
+}

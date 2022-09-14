@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/exercies.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+
+<body>
+   <main>
+      <h2>Story Writer Exercise</h2>
+      <label>Story Name:
+         <input id="name_input"></input>
+      </label>
+      <section>
+         <button onclick="loadStory()">Find and Edit It</button>
+         <button onclick="saveStory()">Save It</button>
+         <button onclick="displayStory()">DisplayIt</button>
+      </section>
+      <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+
+      <section id="story_display"></section>
+   </main>
+</body>
+
+<script src="../js/exercises.js"></script>
+
+</html>
