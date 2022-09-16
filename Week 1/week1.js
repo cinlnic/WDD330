@@ -1,3 +1,4 @@
+/*Story Editor JS*/
 function loadStory() {
    let storyName = document.getElementById('name_input').value;
    let storyHTML = localStorage.getItem(storyName);

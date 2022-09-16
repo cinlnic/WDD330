@@ -45,8 +45,9 @@ header ul {
 list-style-type: none;
 }
 
-a:link {
+.index a:link {
     color:  rgb(236, 115, 97);  
+    font-size: 1.2rem;
 }
 
 a:visited {
@@ -55,6 +56,10 @@ a:visited {
 
 p, h4 {
    margin: 10px 0;
+}
+
+.internal-links {
+   margin-right: 25px;
 }
 
 footer {
