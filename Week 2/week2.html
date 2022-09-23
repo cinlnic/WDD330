@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">     
+   <link rel="stylesheet" href="../css/main.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+<body>
+  <main>
+   <h2>Week 2 Notes</h2>
+   <h4>Ch. 2 Programming Basics</h4>
+   <p>Template literals are special types of strings. Use the backtick ` to wrap the string instead of ". They also allow for interpolation in JS.
+      Place the JS expression inside curly braces with the $ in front. ${ } The expression is evaluated and the result is returned in the string output.
+   </p>
+   <p>Converting numbers to strings: preferred way is String(). parseInt() can be used to convert a string representation of a numerical value back to a number.</p>
+
+   <h4>Ch. 3 Arrays, Logic, Loops</h4>
+   <p>Create an array: const myArray = [ ]; or const myArray = new Array(); (not safe because you can override the value of Array).</p>
+   <p>Adding elements: heroes[0] = 'Superman';</p>
+   <p>Creating array literals: const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk']. Arrays can contain different data types.</p>
+   <p>Removing values: delete avengers[3]; This will remove the value but will be replaced with undefined. The array will still contain 4 elements.</p>
+   <!-- <p>Array properties and methods: <br>length - returns size of the array, <br> pop() - removes last item <br> shift() - removes first item <br> push() - appends a new value to the end
+   <br> unshift() - appends new item to the beginning of the array <br> concat() - merges arrays; does not change the array, creates a another array. Use assignment to update the array
+   to the new array. avengers = avengers.concat(['Hawkeye', 'Black Window']) <br> join() - turn array into a string with all items in the array separated by commas. You can choose a separator. <br>
+   slice() - creates a subarray <br> splice() - removes items and inserts new items in their place <br> reverse() - changes the order permanently <br> sort() - sort the order, changes order permanently <br>
+   indexOf() - return the index of the first occurrence of that item <br> includes() - returns a boolean whether that array contains that element or not </p>
+   <p>Logic <br> if statements = if (condition) { do something } <br> else statements = if (condition) { do something if true } else { do something if false }</p>
+   <p>Ternary Operator: shorthand for if ...  else statement <br> condition ? ( code to run if condition is true) : ( code to run if condtion is false)</p> -->
+
+   <h4>Ch. 4 Functions</h4>
+   <p>Ways to declare a function: <br> Function declaration: function hello() { } <br> Function expressions: const goodbye = function() {} - assigns anonymous function to variable</p>
+   <p>Invoking a Function: <br> hello(); <br> goodbye() - parentheses are needed even if the function is assigned to a variable</p>
+   <p>Return values can be specified using the return keyword.</p>
+   <p>Parameters and Arguments: parameters are set when a function is defined, arguments are provided when the function is invoked.</p>
+   <p>Variable number of arguments: functions have special variable called arguments, an array like object that contains every argument passed to the function. <br>
+   A better option than arguments is the rest operator. To use place three dots in front of last parameter (...args) </p>
+   <p>Default parameters: values used if no arguments are provided. function hello(name='World') {}. Put all default parameters after other parameters.</p>
+   <p>Arrow functions: => parameters come before the arrow and the main body of the function comes after. Multiple parameters go inside parentheses</p>
+   <p>Callbacks: a function that is passed to another funtion.</p>
+   <p>Array Iterators: methods that use callbacks to make them more flexible <br> forEach()</p>
+
+
+   <h2>Week 2 Exercises</h2>
+   <p>I did the Quiz Ninja exercise from the Novice to Ninja book and Array Cardio from JavaScript30.</p>
+   <a href="quizninja.html" class="internal-links">Quiz Ninja</a>
+   <a href="java30_array_cardio.html" class="internal-links">Array Cardio</a>
+   <a href="" class="internal-links">Week 2 Code</a>
+  </main>
+</body>
+
+<script> src="js/main.js"</script>
+
+</html>

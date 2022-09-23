@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Week 2 Team Activity</title>
+</head>
+
+<body>
+   <input id="input">
+   <input type="number" id="inputTextTwo">
+   <button onclick="loadInput()">+</button>
+   <div id="display"></div>
+</body>
+<script>
+   function loadInput() {
+      let input = document.getElementById('input').value;
+      let inputTwo = document.getElementById("inputTextTwo").value;
+
+      document.getElementById("inputDiv").innerHTML = addTwoNums(input, inputTwo);
+   }
+
+   function addNumbers(num) {
+      let sum = 0;
+      if (isNaN(num)) {
+         return "This is not a number, please enter a number!";
+      } else {
+         for (i = 0; i <= num; i++) {
+            sum += i;
+         }
+         return sum;
+      }
+   }
+
+   function addTwoNums(num1, num2) {
+            let sum = Number(num1) + Number(num2);
+            return sum;
+        }
+
+</script>
+
+</html>
