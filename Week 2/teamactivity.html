@@ -6,13 +6,30 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Week 2 Team Activity</title>
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/exercises.css">
 </head>
 
 <body>
-   <input id="input">
-   <input type="number" id="inputTextTwo">
-   <button onclick="loadInput()">+</button>
-   <div id="display"></div>
+   <header>
+      <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+      <ul>
+         <li><a href="../index.html">Home</a></li>
+      </ul>
+   </header>
+   <main>
+      <input type="number" id="input">
+      <input type="number" id="inputTextTwo">
+      <button onclick="loadInput()">+</button>
+      <div id="inputDiv"></div>
+      <section class="code">
+         <p>When we were working on the functions, the addTwoNums function was not reading the inputs as numbers at first.
+            So someone suggested the Number(). But in the addNumbers it was reading the input as a number. Why did it change with the
+            second function? It would just concantinate the numbers together, like 2015 for 20 and 15, instead of adding.
+         </p>
+         <img src="../images/team_code.png">
+      </section>
+   </main>
 </body>
 <script>
    function loadInput() {
@@ -35,9 +52,9 @@
    }
 
    function addTwoNums(num1, num2) {
-            let sum = Number(num1) + Number(num2);
-            return sum;
-        }
+      let sum = Number(num1) + Number(num2);
+      return sum;
+   }
 
 </script>
 
