@@ -9,6 +9,10 @@ function createIndex() {
       {
          label: "Week 2",
          url: "Week 2/week2.html"
+      },
+      {
+         label: "Week 3",
+         url: "Week 3/week3.html"
       }
    ]
 
