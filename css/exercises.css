@@ -60,3 +60,11 @@ textarea {
 .highlight {
   background-color: red;
 }
+
+/*List Bindin*/
+#myList {
+  width: 150px;
+  height: 150px;
+  background-color: snow;
+  margin-bottom: 15px;
+}

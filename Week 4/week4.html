@@ -17,9 +17,40 @@
 <body>
   <main>
    <h2>Week 4 Exercises</h2>
+   <a href="quizninja.html" class="internal-links">Quiz Ninja</a>
+   <a href="ClassesTutorial.html" class="internal-links">Classes Tutorial</a>
    <h2>Week 4 Notes</h2>
-   <h4></h4>
-   <p></p>
+   <h4>Forms</h4>
+   <p>Action attribute - the url where the form will be submitted<br> document.forms - returns an HTML collection of all the forms in the document<br>
+   use index notation or name attribute to identify a form - const form = document.forms[0]; or const form = document.forms.['search'];</p>
+   <p>Form Properties and Methods<br>form.submit()-will submit the form automatically (won't trigger the form submit event) <br>form.reset()-reset all 
+   the form controls back to their initial values (button with type of reset can also be used) <br> form.action=can be used to set the action attribute of a form </p>
+   <h4>Object Oriented Programming</h4>
+   <p>Object can be made using object literal notation <br> const dice = {side: 6, roll() { ...}}</p>
+   <p>Or using a constructor function <br> const Dice = function(sides=6) {this.sides = sides; this.roll= function(){....}}</p>
+   <p>Creating an instance <br> const redDice = new Dice(); or const redDice = new Dice; <br> parentheses are required when default arguments need to be provided <br>
+   Each new object created using this function will inherit the properties and methods defined in the function</p>
+   <p>ES6 has class declaration syntax - does exactly the same thing as a constructor function, but looks similar to writing a class in class-based languages</p>
+   <p>Constructor Property - all objects have the constructor property that returns the constructor function that created it. <br> redDice.constructor returns: [Function: Dice]</p>
+   <p>Static Methods - use keyword static - static description() {} <br> can be called from the Dice class, but not from instances of the Dice class.</p>
+   <p>Prototypal Inheritance<br> every class has a prototype property taht is shared by every instance of the class. Any properties or methods of a class's prototype can accessed by 
+   every object instantiated by that class.</p>
+   <p>Prototype property<br> can add methods and properties after the class has been created. <br>Add new properties by assignment: Turtle.prototype.weapon = 'Hands';
+   <br> Methods can be added similarly<br>Finding the prototype of an object: raph.constructor.prototype; or Object.getPrototypeOf(raph);</p>
+   <p>Own Properties and Prototype Properties <br>Prototype properties are shared by every instance of the class. The value will be the same for all instances
+   and only exist as a property of the prototype.<br>OverWriting prototype properties: can be done by simply assigning a new value to them. These properties will now become an 'own property' of the instance object.</p>
+   <p>Inheritance using extends: creates a sub-class or child class<br> class NinjaTurtle extends Turtle { }<br>super keyword used to access any properties and call methods of the parent class.</p>
+   <p>Polymorphism: different objects can have the same methods, but implement them in different ways.</p>
+   <p>Creating objects from other objects<br> object() constructor function has a method called create - can be used to create a new object that is an exact
+   copy of the object that is provided as the argument</p>
+   <p>Mixins <br> can add properties and methods of some objects to another object without using inheritance<br> more complex objects can be created by mixing basic 
+   objects together</p>
+   <p>Chainging functions <br> if a method returns this, its methods can be chained together to form a sequence of methods calls</p>
+   <p>Binding this<br> use that = this <br> bind(this)<br> for-of instead of forEach()<br> use arrow functions</p>
+   <h4>Modular JavaScript</h4>
+   <p>self contained piece of code that provides functions and methods that can be used in other files<br> file called pi.js place the line - export const PI = 3.14
+   then import it into your main js file with - import { PI } from './pi.js'</p>
+
 
    
   </main>
