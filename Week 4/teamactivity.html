@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      table {
+         width: 300px;
+         height: 300px;
+         border: none;
+         border-collapse: collapse;
+      }
+      td {
+         width: 100px;
+         height: 100px;
+         border: 1px solid;
+         text-align: center;
+         font-size: 2em;
+      }
+
+      td:first-child {
+            border-left: none;
+        }
+        td:first-child, td:nth-child(2), td:last-child {
+            border-top: none;
+        }
+        td:last-child {
+            border-right: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+
+
+   </style>
+</head>
+<body>
+   <table id="game-board">
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>   
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+   </table>
+   <button type="submit" id="reset">Reset</button>
+</body>
+<script>
+   const table = document.getElementById('game-board');
+   let lastClicked;
+   table.addEventListener('click', isClicked);
+   const resetButton = document.getElementById('reset');
+   resetButton.addEventListener('click', reset);
+
+   function isClicked(event) {
+     const td = event.target;
+
+     if (td.innerText) {
+      alert('This box is taken!');
+      return
+     }
+
+      let text = "";
+
+     if (lastClicked && lastClicked.innerText === "X") {
+         text = document.createTextNode("O");
+      } else {
+         text = document.createTextNode("X");
+      }
+    
+     td.appendChild(text);
+     lastClicked = td;
+
+   }
+
+   function reset() {
+      let tds = document.getElementsByTagName('td');
+      let tiles = Array.from(tds);
+      tiles.forEach(td => {td.innerText = ''});
+   };
+
+</script>
+</html>

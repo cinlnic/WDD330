@@ -68,3 +68,8 @@ textarea {
   background-color: snow;
   margin-bottom: 15px;
 }
+
+/*Hero Form*/
+#hero-form {
+  display: inline-grid;
+}

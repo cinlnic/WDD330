@@ -1,0 +1,34 @@
+.todo-app {
+   max-width: 250px;
+}
+
+.todo-app h2 {
+   color: rgb(236, 115, 97);
+   border-bottom: none;
+   margin-top: 25px 0;
+   text-align: center;
+}
+
+#task-list {
+   list-style-type: none;
+   border: solid 2px gray;
+}
+
+#task-list li {
+   width: 100%;
+  border-top: solid 2px gray;
+
+}
+
+table, tr {
+   border: 1px solid;
+   border-collapse: collapse;
+}
+
+table {
+   width: 100%;
+}
+
+.delete-button {
+   text-align: right;
+}

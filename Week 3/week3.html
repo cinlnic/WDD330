@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>WDD 330 Portfolio | Cindi Nichols</title>
-   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">     
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">
    <link rel="stylesheet" href="../css/main.css">
 </head>
 <header>
@@ -14,66 +15,91 @@
       <li><a href="../index.html">Home</a></li>
    </ul>
 </header>
+
 <body>
-  <main>
-   <h2>Week 3 Exercises</h2>
-   <p></p>
-   <a href="quizninja.html" class="internal-links">Quiz Ninja</a>
-   <a href="calculator.html" class="internal-links">Calculator</a>
-   <a href="events.html" class="internal-links">Events</a>
-   <a href="teamactivity.html" class="internal-links">Team Activity</a>
-   <a href="https://github.com/cinlnic/WDD330/tree/main/Week%203" class="internal-links">Week 3 Code</a>
-   <h2>Week 3 Notes</h2>
-   <h3>Questions</h3>
-   <p>In the Events chapter of Novie to Ninja it has this line of code:<br>
-      addEventListener('keyup', (event) => console.log(`You stopped pressing the key on ${new Date}`));<br>
-   It adds event as a parameter of the function but then never uses it. Does it need it there?</p>
-   <h4>This in JavaScript</h4>
-   <p>"This" is a keyword whose value changes depending on how a function gets called.</p>
-   <h4>Object</h4>
-   <p>self-contained set of related values and functions. Properties = value. If the value is a function it is known as a method.</p>
-   <p>Object Literal <br> created directly by wrapping all its properties and methods in {} <br> create an object literal: const spiderman = {};</p>
-   <p>Accessing Properties <br> dot notation: superman.name <br> bracket notation: superman['name']</p>
-   <p>Calling Methods <br> dot notation: superman.fly() <br> bracket notation: superman['fly']()</p>
-   <p>Checking if properties exist <br> in operator: 'city' in superman; <br> checking if it doesn't return undefined: superman.city !== undefined; <br>
-   hasOwnProperty(): superman.hasOwnProperty('city'); </p>
-   <p>Finding all properties of an object <br> fo in loop: for(const key in superman) { console.log(key + ": " + superman[key]); <br>
-   Object.keys() will return an array of all the keys of an object <br> Object.values() will return an array of all the object's value <br>
-   Object.entries() returns an array of key-value pairs</p>
-   <p>Adding properties: done by assigning a value to the new property <br> superman.city = 'Metropolis';</p>
-   <p>Changing properties: use assingment <br> superman['real name'] = 'Kal-El';</p>
-   <p>Removing properties: use the delete operator <br> delete superman.fly</p>
-   <p>Nested Objects: objects can contain other objects <br> values can be accessed by referencing each property in order using dot or bracket notation<br>
-   jla.wonderWoman.realName or jla.['flash']['realName']</p>
-   <p>Namespacing: create an object literal, then put all values as properties and functions as methods. <br>
-   const myMaths = { square(x){return x*x} };  called by using the namespace: myMaths.square(3)</p>
-   <p>Built in objects: JSON methods, Math object, Date object, RegExp object </p>
-   <h4>The Document Object Model</h4>
-   <p>Getting Elements <br> DOM level 0: document.body, .images, .links, .anchors, .forms <br> array like objects, but not actually arrays <br>
-   have a length property, but no other array methods <br> can be made into a node list using Array.from(document.images) or [...document.images] </p>
-   <p>document.getElementby: Id(), TagName(), ClassName(), </p>
-   <p>document.querySelector(): finds the first element in the document matching the selector provided <br>
-   document.querySelectorAll(): finds all elements matching selector provided <br> can also select psuedo elements <br>
-   can be called on any element not just document</p>
-   <p>Getting and Setting Attributes<br> getAttribute(): returns the value of the attribute<br> setAttribute(): changes the value of an element's attribute, 
-   also used to add an attribute to an element</p>
-   <p>Classes of an Element <br> className property: allows the class to be set directly, and also to find the value of the class attribute<br>
-   wonderWoman.className; returns "villain" or wonder.Woman.className = 'hero' - changes the class from villain to hero <br> 
-   classList property: list of all classes an element has, has methods to modify the class of an element <br> add: used to add a class
-   without overwriting other classes that already exist<br> remove: removes a specific class from an element<br> toggle: will add a class
-   if an element doesn't already have it and remove it if it does<br> contains: check to see if an element has a class</p>
-   <p>Dynamic Markup<br>createElement(): takes a tag name as a parameter and returns that element - const flash = document.createElement('li'); <br> 
-   createTextNode(): parameter is a string containing the text that goes in the node - const flashText = document.createTextNode('Flash');<br>
-   appendChild(): add another node as a child node - flash.appendChild(flashText) <br> textContent: makes adding content to an element without appending it - flash.textContent = 'Flash';<br>
-   appendChild() adds new element at the bottom of a list <br> insertBefore(): will place the new element before another element - heroes.insertBefore(aquaman, wonderWoman);<br>
-   removeChild(): removes elements from a page<br> replaceChild(): used to replace on node with another<br> innerHTML: returns all raw HTML and writable</p>
-   <p>Events <br> Event Listeners: document.body.addEventListener("click", doSomething) - this will listen for a click anywhere on the page, then
-   call the doSomething() function <br> addEventListener(): first parameter is the type of event, second is the callback function<br>
-   Inline event handlers: <br> onclick: inline attributes, best avoided </p>
-   
-  </main>
+   <main>
+      <h2>Week 3 Exercises</h2>
+      <section class="exercises-links">
+         <a href="quizninja.html" class="internal-links">Quiz Ninja</a>
+         <a href="calculator.html" class="internal-links">Calculator</a>
+         <a href="events.html" class="internal-links">Events</a>
+         <a href="teamactivity.html" class="internal-links">Team Activity</a>
+         <a href="https://github.com/cinlnic/WDD330/tree/main/Week%203" class="internal-links">Week 3 Code</a>
+      </section>
+
+      <h2>Week 3 Notes</h2>
+      <h3>Questions</h3>
+      <p>In the Events chapter of Novie to Ninja it has this line of code:<br>
+         addEventListener('keyup', (event) => console.log(`You stopped pressing the key on ${new Date}`));<br>
+         It adds event as a parameter of the function but then never uses it. Does it need it there?</p>
+      <h4>This in JavaScript</h4>
+      <p>"This" is a keyword whose value changes depending on how a function gets called.</p>
+      <h4>Object</h4>
+      <p>self-contained set of related values and functions. Properties = value. If the value is a function it is known
+         as a method.</p>
+      <p>Object Literal <br> created directly by wrapping all its properties and methods in {} <br> create an object
+         literal: const spiderman = {};</p>
+      <p>Accessing Properties <br> dot notation: superman.name <br> bracket notation: superman['name']</p>
+      <p>Calling Methods <br> dot notation: superman.fly() <br> bracket notation: superman['fly']()</p>
+      <p>Checking if properties exist <br> in operator: 'city' in superman; <br> checking if it doesn't return
+         undefined: superman.city !== undefined; <br>
+         hasOwnProperty(): superman.hasOwnProperty('city'); </p>
+      <p>Finding all properties of an object <br> fo in loop: for(const key in superman) { console.log(key + ": " +
+         superman[key]); <br>
+         Object.keys() will return an array of all the keys of an object <br> Object.values() will return an array of
+         all the object's value <br>
+         Object.entries() returns an array of key-value pairs</p>
+      <p>Adding properties: done by assigning a value to the new property <br> superman.city = 'Metropolis';</p>
+      <p>Changing properties: use assingment <br> superman['real name'] = 'Kal-El';</p>
+      <p>Removing properties: use the delete operator <br> delete superman.fly</p>
+      <p>Nested Objects: objects can contain other objects <br> values can be accessed by referencing each property in
+         order using dot or bracket notation<br>
+         jla.wonderWoman.realName or jla.['flash']['realName']</p>
+      <p>Namespacing: create an object literal, then put all values as properties and functions as methods. <br>
+         const myMaths = { square(x){return x*x} }; called by using the namespace: myMaths.square(3)</p>
+      <p>Built in objects: JSON methods, Math object, Date object, RegExp object </p>
+      <h4>The Document Object Model</h4>
+      <p>Getting Elements <br> DOM level 0: document.body, .images, .links, .anchors, .forms <br> array like objects,
+         but not actually arrays <br>
+         have a length property, but no other array methods <br> can be made into a node list using
+         Array.from(document.images) or [...document.images] </p>
+      <p>document.getElementby: Id(), TagName(), ClassName(), </p>
+      <p>document.querySelector(): finds the first element in the document matching the selector provided <br>
+         document.querySelectorAll(): finds all elements matching selector provided <br> can also select psuedo elements
+         <br>
+         can be called on any element not just document</p>
+      <p>Getting and Setting Attributes<br> getAttribute(): returns the value of the attribute<br> setAttribute():
+         changes the value of an element's attribute,
+         also used to add an attribute to an element</p>
+      <p>Classes of an Element <br> className property: allows the class to be set directly, and also to find the value
+         of the class attribute<br>
+         wonderWoman.className; returns "villain" or wonder.Woman.className = 'hero' - changes the class from villain to
+         hero <br>
+         classList property: list of all classes an element has, has methods to modify the class of an element <br> add:
+         used to add a class
+         without overwriting other classes that already exist<br> remove: removes a specific class from an element<br>
+         toggle: will add a class
+         if an element doesn't already have it and remove it if it does<br> contains: check to see if an element has a
+         class</p>
+      <p>Dynamic Markup<br>createElement(): takes a tag name as a parameter and returns that element - const flash =
+         document.createElement('li'); <br>
+         createTextNode(): parameter is a string containing the text that goes in the node - const flashText =
+         document.createTextNode('Flash');<br>
+         appendChild(): add another node as a child node - flash.appendChild(flashText) <br> textContent: makes adding
+         content to an element without appending it - flash.textContent = 'Flash';<br>
+         appendChild() adds new element at the bottom of a list <br> insertBefore(): will place the new element before
+         another element - heroes.insertBefore(aquaman, wonderWoman);<br>
+         removeChild(): removes elements from a page<br> replaceChild(): used to replace on node with another<br>
+         innerHTML: returns all raw HTML and writable</p>
+      <p>Events <br> Event Listeners: document.body.addEventListener("click", doSomething) - this will listen for a
+         click anywhere on the page, then
+         call the doSomething() function <br> addEventListener(): first parameter is the type of event, second is the
+         callback function<br>
+         Inline event handlers: <br> onclick: inline attributes, best avoided </p>
+
+   </main>
 </body>
 
-<script> src="js/main.js"</script>
+<script> src = "js/main.js"</script>
 
 </html>

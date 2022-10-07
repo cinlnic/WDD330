@@ -1,19 +1,33 @@
-<!doctype html>
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <title>Hero Form</title>
-    <!-- <link rel="stylesheet" href="../css/exercises.css"> -->
-<style>
-.error{
-   background: #f99;
-   border: #900 1px solid;
-   display: none;
- }
- </style>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">     
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/exercises.css">
+   <style>
+      .error{
+         background: #f99;
+         border: #900 1px solid;
+         display: none;
+       }
+       </style>
+      
 </head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+
 <body>
-    <form id="hero">
+   <main>
+   <h2>Hero Form</h2>
+    <form id="hero-form">
         <label for="heroName">Name:
             <input type="text" id="heroName" name="heroName" autofocus placeholder="Your Super Hero Name" maxlength=32 >
         </label>
@@ -64,13 +78,14 @@
          </select>
       </label>
 
-      <label for="origin">
+      <label for="origin">Origin Story:
          <textarea id="origin" name="origin" rows="20" cols="60"></textarea>
       </label>
 
       <button type="submit" id="submit" disabled>Submit</button>
       
     </form>
-<script src='main.js'></script>
+    </main>
+<script src='hero.js'></script>
 </body>
 </html>

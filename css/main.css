@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
 
-* { margin: 0; box-sizing: border-box; } 
+* {
+   margin: 0;
+   box-sizing: border-box;
+}
 
-body { 
-    font-size: 16px; 
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(227, 226, 226);
+body {
+   font-size: 16px;
+   font-family: 'Roboto', sans-serif;
+   background-color: rgb(227, 226, 226);
 }
 
 main {
@@ -22,8 +25,8 @@ header {
 }
 
 h1 {
-    font-size: 1.2rem;
-    color: whitesmoke;
+   font-size: 1.2rem;
+   color: whitesmoke;
 }
 
 h2 {
@@ -41,25 +44,34 @@ header a:visited {
    color: whitesmoke;
 }
 
-header ul {
-list-style-type: none;
+header ul, .index {
+   list-style-type: none;
 }
 
 .index a:link {
-    color:  rgb(236, 115, 97);  
-    font-size: 1.2rem;
+   color: rgb(236, 115, 97);
+   font-size: 1.2rem;
 }
 
-a:visited {
-    color: rgb(236, 115, 97);
-}
-
-p, h4 {
+.index li {
    margin: 10px 0;
 }
 
+a:visited {
+   color: rgb(236, 115, 97);
+}
+
+p,
+h4 {
+   margin: 10px 0;
+}
+
+.exercises-links {
+   margin-top: 15px;
+}
+
 main .internal-links {
-   color:rgb(236, 115, 97);
+   color: rgb(236, 115, 97);
    margin-right: 25px;
 }
 
