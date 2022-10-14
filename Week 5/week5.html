@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">     
+   <link rel="stylesheet" href="../css/main.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+<body>
+  <main>
+   <h2>Week 1 Exercises</h2>
+   <section class="exercises-links">
+      <a href="./TeamActivity/index.html" class="internal-links">Team Activity</a>
+   </section>
+   <h2>Week 1 Notes</h2>
+   <h4>Errors, Exceptions, and Warnings</h4>
+   <p>Errors are usually caused by system error, programmer error, or user error.</p>
+   <p>Exceptions<br> error that produces a return value that can then be used by the program to deal with the error.</p>
+   <p>Warning<br>error in the code that isn't enough to cause the program to crash.</p>
+   <h4>Strict Mode</h4>
+   <p>Produces more exceptions and warnings and prohibits the use of some deprecated features.<br> requires 'use strict'; to be added to the first
+   line of a JS file.<br> Can be used on a per-function basis by adding the line inside a function.</p>
+   <p>Linting Tools<br> JS Lint, JS Hint, ES Lint: tools that can be used to test the quality of JS Code</p>
+   <h4>Feature Detection</h4>
+   <p>determines browser support for a feature <br> use an if statement to check whether an object or method exists</p>
+   <h4>Debugging in the Browser</h4>
+   <p>alert() - most basic form of debugging, stops a program from running until OK is clicked and allows variables to be checked</p>
+   <p>console object - logs information debugging</p>
+   <p>debugging tools - allows breakpoints to be set</p>
+   <h4>Error Objects</h4>
+   <p>can be created by the host enviroment when an exception occures, or created in the code using a constructor function: const error = new Error();
+      takes a parameter that's used as error message<br> it is possible to throw your own exceptions using the throw statement.</p>
+   <h4>Exception Handling</h4>
+   <p>When exceptions occur the program terminates with an error message. This does not look good in production. Catching the error will allow the error to be
+      hidden from users and possibly let the program keep running.</p>
+   <p>try, catch, finally</p>
+   <h4>Tests</h4>
+   <p>test can be a simple function that tests a piece of code runs as it should</p>
+   <p>Test-driven development - process of writing tests before any actual code. </p>
+
+
+   
+  </main>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

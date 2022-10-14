@@ -1,34 +1,104 @@
 .todo-app {
-   max-width: 250px;
+   max-width: 300px;
+   background-color: whitesmoke;
+   margin-top: 25px;
+   padding: 10px;
 }
 
 .todo-app h2 {
-   color: rgb(236, 115, 97);
+   color: rgb(30, 23, 168);
    border-bottom: none;
-   margin-top: 25px 0;
    text-align: center;
+   margin: 0;
 }
 
 #task-list {
+    margin: 0 auto;
+   padding: 0;
+   width: 90%;
    list-style-type: none;
-   border: solid 2px gray;
+   text-align: left;
+   border: solid 1px grey;
+   border-bottom: none;
 }
 
 #task-list li {
-   width: 100%;
-  border-top: solid 2px gray;
-
+   border-bottom: solid 1px grey;
+   padding: 2px;
+   display: flex;
 }
 
-table, tr {
-   border: 1px solid;
-   border-collapse: collapse;
-}
-
-table {
-   width: 100%;
+#task-list label {
+   flex: 2;
+   margin: 2px 0 0 5px;
 }
 
 .delete-button {
-   text-align: right;
+   background-color: whitesmoke;
+   border: none;
+   font-size: 1.3rem;
+   font-weight: 500;
+ }
+
+.list-footer {
+   border: solid 1px grey;
+   border-top: none;
+   margin: 0 auto;
+   padding: 5px;
+   width: 90%;
+   font-size: .7rem;
+   display: flex;
+   justify-content: space-around;
 }
+
+.list-footer button {
+   background-color: whitesmoke;
+   border: none;
+   border-radius: 0;
+}
+
+.add-task {
+   margin: 25px auto;
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.add-task input {
+   flex: 2;
+   margin-right: 2px;
+}
+
+.add-task button {
+   background-color: whitesmoke;
+   border: 1px solid;
+   border-radius: 0;
+   font-size: 1.3rem;
+}
+
+ input[type="checkbox"] {
+   appearance: none;
+   margin: 0;
+   color: purple;
+  width: 1.75em;
+  height: 1.75em;
+  border: 1px solid grey;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+   content: "";
+   width: 1.5em;
+   height: 1.5em;
+   transform: scale(0);
+   transition: 120ms transform ease-in-out;
+   box-shadow: inset 1em 1em purple;
+ }
+
+ input[type="checkbox"]:checked::before {
+   transform: scale(1);
+ } 
+
+ 

@@ -22,35 +22,17 @@
       <h2>To-Do's</h2>
       <ul id="task-list">
          <li>
-            <input type="checkbox" data-index=${i} id="item${i}" />
+            <input type="checkbox" />
             <label for="item${i}">Laundry</label>
+            <button type="submit" class="delete-button">X</button>
          </li>
          <li>
-            <input type="checkbox" data-index=${i} id="item${i}" />
+            <input type="checkbox" />
             <label for="item${i}">Laundry</label>
+            <button type="submit" class="delete-button">X</button>
          </li>
          </li>
       </ul>
-      <table>
-         <tr>
-            <td>
-               <input type="checkbox" data-index=${i} id="item${i}" />
-               <label for="item${i}">Laundry</label>
-            </td>
-            <td class="delete-button">
-               <input type="submit" data-index=${i} id="item${i}" />
-            </td>
-         </tr>
-         <tr>
-            <td>
-               <input type="checkbox" data-index=${i} id="item${i}" />
-               <label for="item${i}">Laundry</label>
-            </td>
-            <td class="delete-button">
-               <input type="submit" data-index=${i} id="item${i}" />
-            </td>
-         </tr>
-      </table>
       <section class="list-footer">
          <p id="num-left">3 tasks left</p>
          <button>All</button>
@@ -58,15 +40,14 @@
          <button>Completed</button>
       </section>
       <form class="add-task">
-         <input type="text" id="add-task">
-         <button>Add</button>
+         <input type="text" name="task" id="task">
+         <button>+</button>
       </form>
-
-
-
+      
    </main>
 </body>
 
-<script src="js/main.js"></script>
+<script type="module" src="main.js"></script>
+
 
 </html>
