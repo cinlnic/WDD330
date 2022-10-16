@@ -5,7 +5,7 @@
   * @return {array}     The value as an array of objects
  */
 function readFromLS(key) { 
-   const todoList = JSON.parse(localStorage.getItem(key)) ;
+   const todoList = JSON.parse(localStorage.getItem(key)) || [];
    return todoList;
 }
 
@@ -16,6 +16,8 @@ function readFromLS(key) {
  
  */
 function writeToLS(key, data) { 
+   // const currentList = readFromLS(key);
+   // currentList.push(data);
    localStorage.setItem(key, JSON.stringify(data));
 }
 

@@ -1,22 +1,21 @@
 import * as ls from './ls.js';
 import * as util from './utilities.js';
 
-const todoList = null;
+let todoList = [];
 
 /*in the constructor you should set a variable with the element our todo list will be built in, 
 and the key we will use to read/write from localStorage*/
-class Todos {
+export default class Todos {
    constructor (element, key) {
-      this.element = element;
+      this.element = util.qs(element);
       this.key = key;
    }
 
-   addTodo() {
-      // Add a method to the Todos class called addTodo. It should grab the input in the html where users enter the text of the task, 
+   // Add a method to the Todos class called addTodo. It should grab the input in the html where users enter the text of the task, 
       // then send that along with the key to a SaveTodo() function. Then update the display with the current list of tasks
-      const task = util.qs('#task').nodeValue;
-      console.log(task);
-      saveTodo(this.key, task);
+   addTodo() {
+      const task = util.qs('#task').value;
+      saveTodo(key, task);
       this.listTodos();
    }
 
@@ -38,6 +37,7 @@ class Todos {
    filterTodo() {
 
    }
+
 }
 
 
@@ -51,7 +51,9 @@ class Todos {
 function saveTodo(key, task) { 
    const timestamp = new Date();
    const todo = {id: timestamp, content: task, completed: "false"};
+   todoList = getTodos(key);
    todoList.push(todo);
+   console.log(todoList);
    ls.writeToLS(key, todoList);
 }
 
@@ -65,7 +67,7 @@ If it is null then pull the list of todos from localstorage, update the local va
 @return {array} The value as an array of objects
 */
 function getTodos(key) { 
-   if (todoList === null) {
+   if (todoList === undefined || todoList === null || todoList.length === 0) {
       todoList = ls.readFromLS(key);
       return todoList;
    }
@@ -79,13 +81,14 @@ function getTodos(key) {
 */
 function renderTodoList(list, element) { 
    
-   for (task of list) {
-      const li = document.createElement('li');
-      element.append(li);
-   }
+   list.forEach(task => {
+      const taskLi = document.createElement('li');
+      taskLi.innerHTML = `<input type="checkbox" />
+                        <label for="${task.id}">${task.content}</label>
+                        <button type="submit" class="delete-button">X</button>`
+      element.append(taskLi);
+   });
 }
 
 
-
-export default Todos;
 
