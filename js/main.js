@@ -26,6 +26,10 @@ function createIndex() {
          label: "To-do App",
          url: "ToDo/index.html"
       },
+      {
+         label: "Week 7",
+         url: "Week 7/week7.html"
+      },
    ]
 
    for (let i = 0; i < index.length; i++) {

@@ -73,3 +73,12 @@ textarea {
 #hero-form {
   display: inline-grid;
 }
+
+/*AJAx html*/
+.facts {
+  margin-top: 15px;
+}
+
+#todo input[type="text"] {
+  height: 28px;
+}
