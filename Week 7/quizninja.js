@@ -1,22 +1,22 @@
 /*Quiz Ninja Week 4*/
 
-// const quiz = [
-//    {name: "Superman", realName: "Clark Kent"},
-//    {name: "Wonder Woman", realName: "Diana Prince"},
-//    {name: "Batman", realName: "Bruce Wayne"},
-//    {name: "The Hulk", realName: "Bruce Banner"},
-//    {name: "Spiderman", realName: "Peter Parker"},
-//    {name: "Cyclops", realName: "Scott Summers"},
-// ]; //objects replace nested arrays from week 2
+const quiz = [
+   {name: "Superman", realName: "Clark Kent"},
+   {name: "Wonder Woman", realName: "Diana Prince"},
+   {name: "Batman", realName: "Bruce Wayne"},
+   {name: "The Hulk", realName: "Bruce Banner"},
+   {name: "Spiderman", realName: "Peter Parker"},
+   {name: "Cyclops", realName: "Scott Summers"},
+]; //objects replace nested arrays from week 2
 
-const url = 'http://spbooks.github.io/questions.json';
+// const url = 'http://spbooks.github.io/questions.json';
 
-fetch(url) 
-.then(res => res.json())
-.then(quiz => {
-   view.start.addEventListener('click', () => game.start(quiz.questions), false);
-   view.response.addEventListener('click', (event) => game.check(event), false);
-})
+// fetch(url) 
+// .then(res => res.json())
+// .then(quiz => {
+//    view.start.addEventListener('click', () => game.start(quiz.questions), false);
+//    view.response.addEventListener('click', (event) => game.check(event), false);
+// })
 
 function random(a, b=1) {
    //if only 1 argument is provided, we need to swap the values of a and b
@@ -131,3 +131,6 @@ const game = { //object game becomes the namespace for the functions from the la
 
 }
 
+view.start.addEventListener('click', () => game.start(quiz), false);
+
+view.response.addEventListener('click', (event) => game.check(event), false);
