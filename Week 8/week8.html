@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">
+   <link rel="stylesheet" href="../css/main.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+
+<body>
+   <main>
+      <h2>Week 8 Exercises</h2>
+      <section class="exercises-links">
+         <a href="animation.html">Book Tutorials</a>
+         <a href="./TeamActivity/index.html">Team Activity</a>
+         <a href="">Week 8 Code</a>
+      </section>
+      <h2>Week 8 Questions</h2>
+      <p></p>
+      <h2>Week 8 Notes</h2>
+      <h3>Transforms and Transitions</h3>
+      <h4>Transforms</h4>
+      <p>Tranform - lets you translate, rotate, scale, and/or skew elements (transforms don't work on inline
+         elements)<br>to declare multiple transformations use a space-separated list of tranform functions<br>transform:
+         translateX(40px) scale(1.5)<br>Order of the tranform functions matter</p>
+      <p>Translate - move elements up, down, left,
+         right<br>transform: translate(x, y);</p>
+      <p>Scaling - scales an element by the factors horizontally then veritcally<br>transform: scale(1.5, 0.25);</p>
+      <p>Rotate - rotates an element around the point of origin by a specified angle value<br>transform: rotate(10deg);</p>
+      <p>Skew - specifies a skew along the x and y axes<br>transform: skew(15deg, 4deg);</p>
+      <p>Orgin of the transform can be changed<br>tranform-origin: 0 0;</p>
+      <h4>Transitions</h4>
+      <p>How to create a simple transition: <br>1. Declare the original state of the element in the default style declaration<br>
+      2. Declare the final state of your transitioned element<br>3. Include the transition functions in your default style declaration</p>
+      <p>Transition functions<br>transition-property - defines CSS property that should be transitioned<br>transition-property: transform, color;
+      <br>transition-duration - sets how long the transition will take<br>transition-timing-function - lets you control the pace of the transition<br>transition-timing-function: ease-out;
+      <br>transition-delay - set a delay before the transition begins<br>transition shorthand - transition: transform .02s ease-out 50ms;</p>
+      <h4>Animations</h4>
+      <p>@keyframes myAnimation { }<br>animation functions listed in animation.css</p>
+
+      <h3>Canvas, SVG, and Drag and Drop</h3>
+      <h4>Canvas</h4>
+      <p>Canvas API allows you to draw through JavaScript<br>height and width must be set in html<br>coordinate system, the top-left corner is (0,0)</p>
+      
+
+
+   </main>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

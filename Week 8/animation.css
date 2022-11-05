@@ -1,0 +1,104 @@
+
+@keyframes bike {
+   0% {
+      background-position: 0 0;
+   }
+   100% {
+      background-position: -360px 0;
+   }
+   
+}
+
+@keyframes move {
+   0% {
+      transform: translateX(-100px);
+   }
+   100% {
+      transform: translateX(100px);
+   }
+}
+
+.bike-animation::after {
+   content: '';
+   width: 90px;
+   height: 92px;
+   background-image: url(../images/bike_sprite.png);
+   display: block;
+   margin: auto;
+   animation: 
+      .04s steps(4, end) infinite 50ms bike,
+      8s linear infinite 50ms move;
+   animation-play-state: paused;
+}
+
+.bike-animation:hover::after {
+   animation-play-state: running;
+}
+
+/* animation properties
+.verbose {
+   animation-name: appearDisappear;
+   animation-duration: 300ms;
+   animation-timing-function: ease-in;
+   animation-iteration-count: 1;
+   animation-direction: alternate;
+   animation-delay: 5s;
+   animation-fill-mode: backwards;
+   animation-play-state: running;
+}
+
+.consise {
+   animation: 300ms ease-in alternate 5s backwards appearDisappear
+} */
+
+/*CANVAS*/
+.canvas {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.myCanvas {
+   border: dotted 2px black;
+   margin: 0 20px 0 0;
+}
+
+main {
+   width: 1000px;
+}
+h3 {
+   margin-top: 20px;
+}
+
+.save {
+   display: flex;
+   flex-direction: column;
+}
+
+.save button {
+   width: 200px;
+   margin: 10px 0;
+}
+
+svg {
+   height: 200px;
+   width: 200px;
+}
+#ac3 {
+   display: flex;
+}
+
+.content {
+   align-self: flex-end;
+}
+
+.cat {
+   height: 200px;
+}
+
+.mouse {
+   height: 50px;
+}
+
+.draganddrop .mc {
+   text-align: center;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="animation.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+
+<body>
+   <main>
+      <h3>Animation Example</h3>
+      <p>Hover over the bike to see the animation!</p>
+      <div class="bike-animation"></div>
+
+      <h3>Drag and Drop Example</h3>
+      <p>Feed the cat!</p>  
+      <article id="ac3">
+         
+         <img src="../images/cartoon-cat-transparent-background-9.png" id="cat" class="cat" alt="cartoon cat">
+         <h5 id="cat-heading"></h5>
+         <div class="content">
+         <p id="mouseContainer" class="mc">
+             <img src="../images/mouse-clipart-transparent-8.png" alt="mouse treat" id="mouse1" class="mouse" draggable="true"> 
+             <img src="../images/mouse-clipart-transparent-8.png" alt="mouse treat" id="mouse2" class="mouse" draggable="true"> 
+             <img src="../images/mouse-clipart-transparent-8.png" alt="mouse treat" id="mouse3" class="mouse" draggable="true"> 
+         </p>
+      </div>
+      </article>
+
+      <section class="canvas">
+         <div class="canvas-demos">
+         <h3>Canvas Examples</h3>
+         <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+         <canvas id="demo2" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+         <canvas id="demo3" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+         <canvas id="demo4" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+      </div>
+         <div class="canvas-demos save">
+         <p>Saving canvas drawings</p>
+         <canvas id="demo5" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+
+         <button name="saveButton" id="saveButton">Save Drawing</button>
+      </div>
+
+      <div class="canvas-demos">
+         <p>Drawing an image to the canvas</p>
+         <canvas id="demo6" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+         
+         <img src="../images/html5-logo.png" id="myImageElem">
+      </div>
+         <div class="canvas-demos">
+         <p>Converting an image from color to black and white</p>
+         <canvas id="demo7" class="myCanvas" width="200" height="200">
+            Sorry! Your browser doesn't support Canvas.
+         </canvas>
+         <img src="../images/html5-logo.png" id="secondImage">
+         </div>
+      </section>
+
+      <h3>SVG Examples</h3>
+      <svg xmlns="http://www.w3.org/1000/svg" viewBox="0 0 400 400">
+         <circle cx="50" cy="50" r="25" fill="red" />
+      </svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 400 400">
+         <desc>Drawing a Rectangle</desc>
+         <rect x="10" y="10" width="100" height="100"  
+            fill="blue" stroke="red" stroke-width="3" /> 
+      </svg>
+
+      
+
+   </main>
+</body>
+
+<script src="canvas.js"></script>
+<script src="dragDrop.js"></script>
+
+
+</html>

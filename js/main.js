@@ -30,6 +30,10 @@ function createIndex() {
          label: "Week 7",
          url: "Week 7/week7.html"
       },
+      {
+         label: "Week 8",
+         url: "Week 8/week8.html"
+      },
    ]
 
    for (let i = 0; i < index.length; i++) {

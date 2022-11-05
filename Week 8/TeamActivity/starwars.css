@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.swapi-main {
+   width: 300px;
+   text-align: center;
+   line-height: 1.5rem;
+}
+
+.swapi-main h2 {
+  margin-bottom: 30px;
+}
+
+.swapi-main h3, .swapi-main h4 {
+   font-family: 'Russo One', sans-serif;
+}
+
+.people {
+   cursor: pointer;
+   list-style-type: none;
+   margin-left: -40px;
+   margin-bottom: 15px;
+}
+
+.swapi-main button {
+   padding: 5px;
+    background-color: dodgerblue;
+    color: white;
+    border-color: dodgerblue;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

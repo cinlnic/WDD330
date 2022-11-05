@@ -13,7 +13,7 @@ body {
 
 main {
    margin: 1.25rem auto;
-   max-width: 600px;
+   width: 600px;
 }
 
 header {
