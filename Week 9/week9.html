@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">
+   <link rel="stylesheet" href="../css/main.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+
+<body>
+   <main>
+      <h2>Week 9 Exercises</h2>
+      <section class="exercises-links">
+         <a href="animation.html" class="internal-links">JS Animation</a>
+         <a href="factors.html" class="internal-links">Web Workers / Canvas</a>
+         <a href="quizninja.html" class="internal-links">Quiz Ninja</a>
+      </section>
+      <h2>Week 9 Notes</h2>
+      <h3>Window Object</h3>
+      <h4>The Browser Object Model</h4>
+      <p>properties and methods that contain information about the browser and computer screen<br>available through the
+         window object</p>
+      <p>Going Global<br>global variables can be accessed in all parts of the program<br>global variables are properties
+         of the global object</p>
+      <p>Dialog<br>alert()<br>confirm()<br>prompt()<br>these stop the execution of the program until the user clicks ok
+         or cancel</p>
+      <h4>Browser Information</h4>
+      <p>window.navigator.userAgent - returns info about the browser and operating system, can be modified so may not be
+         accurate</p>
+      <p>Location Properties<br>window.location - contains info abou the URL of the current page<br>window.location.href
+         - returns the URL as a string<br>
+         window.location.protocol - returns a string describing the protocol used (http, https, pop2, ftp,
+         etc.)<br>window.location.host - returns a string describing the comain of the current URL and the port number
+         <br>window.location.hostname - returns a string describing the domain of the current
+         URL<br>window.location.port - returns the port number if it is explicitly stated in the URL
+         <br>window.location.pathname - returns the path that follows the domain<br>window.location.search - returns a
+         string that starts with a ? followed by the query string<br>
+         window.location.hash - returns a string starting with a # followed by the fragment
+         identifier<br>window.location.origin - shows protocol and domain where the current
+         page originated from
+      </p>
+      <p>Location Methods<br>reload() - force a reload of the current page<br>assign() - load anther resource from a
+         URL<br>replace() - same as assign, but the current page will
+         not be stored in the session history so user can not navigate back to it<br>toString() - returns a string
+         containing the whole URL</p>
+      <h4>The Browser History</h4>
+      <p>window.history can be used to access info about any previously visited page in the current browser
+         session<br>window.hisotry.length - shows how
+         many pages have been visited before arriving at the current page<br>window.history.go() - can be used to go to
+         a specific page, where 0 is the current page
+         can also use window.hisotry.forward() and window.history.back()</p>
+      <h4>Controlling Windows</h4>
+      <p>window.open() - opens a new window, takes the URL of the page to be opened as first parameter, window title as
+         second, list of attributes as the third<br>close() -
+         used to close a window<br>window.moveTo() - can move a window using X,Y coordinates<br>window.resizeTo() -
+         change height and width of a window</p>
+      <h4>Screen Information</h4>
+      <p>window.screen object contains info about the screen the browser is displayed on</p>
+      <h4>The Document Object</h4>
+      <p>document.write() - writes a string to the page, if a page is loaded it will completely replace the current
+         document</p>
+      <p>Cookies<br>small files saved locally on user's computer<br>creating cookies - document.cookie =
+         'name=Superman'<br>cookie property acts like a special type of string,
+         assinging another cookie won't overwrite the entire property, just append it to the end of the
+         string<br>Changing values - a cookies value can be changed by reassinging it<br>Reading cookies - enter
+         document.cookie:<br>
+         Cookie expiry dates - deleted when a browser session is finished, can be made persistent by adding
+         'expires=date' to the end of the cookie when set or using max-age<br>
+         Path and domain of cookies<br>path=/ - any page in the root directory can read the cookie<br> domain=domainName
+      </p>
+      <p>Secure Cookies<br>add string secure to the end will ensure it's only transmitted over a secure HTTPS network
+      </p>
+      <p>Deleting cookies<br>to remove a cookie set it to expire at time in the past</p>
+      <h4>Timing Function</h4>
+      <p>setTimeout(), clearTimeout()</p>
+      <p>setInterval() - repeatedly invoke callback function after every given number of miliseconds</p>
+      <h3>HTML5 API</h3>
+      <h4>The data- Attribute</h4>
+      <p>a way of embedding data in a web page using custom attributes that are ignored by the browser<br>start with data-<br>contain only
+      lowercase letters, numbers, hyphens, dots, colons or underscores<br>include an option string value<br>example: data-powers = 'flight superSpeed'<br>
+   each element has a dataset property used to access the data- attributes it contains<br>const powers = superman.dataset.powers; returns 'flight superSpeed'</p>
+      <h4>HTML5 Web Storage</h4>
+      <p>Info is not shared with the server on every request<br>Info is available in multiple windows of the browser if the domain is the same<br>
+      Storage capacity limit is much larger than cookie limit<br>Data stored does not expire</p>
+      <p>localstorage.setItem('name', 'Walter White')</p>
+      <p>localStorage.getItem('name');</p>
+      <p>localstorage.removeItem('name'); or delete localStorage.name;</p>
+      <p>localStorage.clear(); - removes everything in localStorage</p>
+
+
+   </main>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

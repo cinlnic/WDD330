@@ -82,3 +82,16 @@ textarea {
 #todo input[type="text"] {
   height: 28px;
 }
+
+/*Ch.9 animation example*/
+#square1, #square2 {
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: #d16;
+}
+
+/*Factors*/ 
+#output {
+  margin-bottom: 30px;
+}
