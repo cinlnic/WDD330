@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>WDD 330 Portfolio | Cindi Nichols</title>
+   <meta name="description" content="Assignment portal page for Cindi Nichols WDD 330 class">     
+   <link rel="stylesheet" href="../css/main.css">
+</head>
+<header>
+   <h1>WDD 330 Portfolio | Cindi Nichols</h1>
+   <ul>
+      <li><a href="../index.html">Home</a></li>
+   </ul>
+</header>
+<body>
+  <main>
+   <h2>Week 10 Exercises</h2>
+   <section class="exercises-links">
+      <a href="formValidation.html" class="internal-links">Form Validation</a>
+      <a href="fetch.js" class="internal-links">Fetch Code</a>
+      <p>Check the console for Fetch() example results</p>
+      
+   </section>
+   <h2>Week 10 Notes</h2>
+   <h4>Validating Forms</h4>
+   <p>Client side form validation<br>verify all form fields are filled out</p>
+   <p>Server side form validation<br>done on the server after form is submitted</p>
+   <p>Built in form validation - uses validation features<br>required - specifies whether a form field must be filled in before submitted<br>
+   minlength and maxlength - the min and max length of data<br>min and max - specifies min and max values of number inputs<br>pattern - specifies a regex pattern</p>
+   <p>When an element matches :valid CSS psuedo-class lets you apply a specific style to a valid element<br></p>
+   <h5>Validating forms using JavaScript</h5>
+   <p>most browsers support Constraint Validation API</p>
+   <h4>Fetch APi</h4>
+   <p>fetch() - method that lets you fetch resources asynchronously across the network<br>Takes one argument - the path to the resource you want to fetch<br>returns a promise that resolves with a response object</p>
+   <p>response.json() - will return the JSON object</p>
+   <p>Check for a successful fetch() would include checking the promise was resolved, then checking the respones.ok property has a value of true</p>
+
+   
+  </main>
+</body>
+
+<script src="fetch.js"></script>
+
+</html>
