@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto$family=Shadows+Into+Light&display=swap');
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: #fff3b0af;
+   margin-bottom: 60px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Shadows Into Light', cursive;
+   letter-spacing: .1em;
+   font-size: 1.5rem;
+}
+
+header {
+   background-color: #335c67;
+   font-family: 'Shadows Into Light', cursive;
+}
+
+footer {
+   position: fixed;
+   bottom: 0;
+   height: 40px;
+   width: 100%;
+   background-color: #335c67;
+   color: #e09f3e;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 1.5rem;
+}
+
+.hamburger {
+   display: none;
+}
+
+.bar {
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   transition: all 0.3s ease-in-out;
+   background-color: #e09f3e;
+}
+
+.nav-menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-item {
+   margin-left: 3rem;
+}
+
+.nav-link {
+   text-decoration: none;
+   font-size: 1.6rem;
+   color:#e09f3e;
+}
+
+.nav-link:hover {
+   color: rgba(224, 159, 62, 0.578);
+}
+
+.nav-title {
+   text-decoration: none;
+   font-size: 2.1rem;
+   color: #e09f3e;
+}
+
+.search {
+   width: 100%;
+   height: 100px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
+
+input[type='text'] {
+   border-style: solid;
+   border-width: 2px;
+   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+   box-sizing: border-box;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+   font-family: "Roboto", sans-serif;
+   font-size: 1rem;
+   padding: .8rem;
+}
+
+select {
+   border-style: solid;
+   border-width: 2px;
+   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+   box-sizing: border-box;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+   font-family: 'Shadows Into Light', cursive;
+   letter-spacing: .1em;
+   font-size: 1rem;
+   padding: .50rem;
+}
+
+button {
+   align-self: center;
+   background-color: #fff;
+   border-style: solid;
+   border-width: 2px;
+   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+   box-sizing: border-box;
+   color: #41403e;
+   cursor: pointer;
+   display: inline-block;
+   font-family: 'Shadows Into Light', cursive;
+   letter-spacing: .1em;
+   font-size: 1rem;
+   padding: .60rem;
+   transition: all 235ms ease-in-out;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+}
+
+
+button:hover, .single-book:hover{
+   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+   transform: translate3d(0, 2px, 0);
+}
+
+button:focus, .single-book:focus {
+   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.filter {
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+   border: 2px solid #e09f3e;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+}
+
+.filter h3 {
+   margin: 30px 0 15px 0;
+}
+
+.filter hr {
+   width: 75%;
+   border: 1px solid #e09f3e;
+}
+
+.genre-list label, .reading-level-list label {
+   margin-right: 15px;
+}
+
+.genre-list,
+.reading-level-list {
+   margin-bottom: 25px;
+}
+
+.submit-filter {
+   margin: 15px auto;
+}
+
+#books {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-evenly;
+   margin: 2rem;
+}
+
+.single-book{
+   padding: 1rem;
+   border: 2px solid #9e2a2b;
+   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+   border-bottom-left-radius: 5px 155px;
+   border-bottom-right-radius: 125px 5px;
+   border-top-left-radius: 155px 5px;
+   border-top-right-radius: 5px 125px;
+
+}
+
+.single-book img {
+   height: 150px;
+   width: 150px;
+   padding: 1rem;
+}
+
+.single-book p {
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+/*Add a Book Page CSS*/
+.main-add {
+   max-width: 60%;
+   margin: 25px auto;
+   border: 2px solid #9e2a2b;
+   padding: 15px;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+   text-align: center;
+}
+
+.main-add h2 {
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: #9e2a2b;
+   padding: 1rem;
+}
+
+.search-results {
+   max-width: 75%;
+   margin: 0 auto;
+   text-align: left;
+   line-height: 2rem;
+}
+
+.search-results h3 {
+   margin-top: 25px;
+}
+
+label[for="comments"] {
+   font-family: 'Shadows Into Light', cursive;
+   letter-spacing: .1em;
+   font-size: 1.5rem;
+}
+
+textarea {
+   width: 100%;
+   height: 150px;
+   border: 2px solid #41403e;
+   border-bottom-left-radius: 15px 255px;
+   border-bottom-right-radius: 225px 15px;
+   border-top-left-radius: 255px 15px;
+   border-top-right-radius: 15px 225px;
+   resize: none;
+}
+
+.add-button {
+   background-color: #9e2a2b;
+   color:#fff;
+   border-color: #41403e;
+}
+
+/*Book details page CSS*/
+.main-details {
+   width: 50%;
+   margin: 25px auto;
+}
+
+.book-details {
+   display: flex;
+   justify-content: space-between;
+   margin: 25px 15px;
+   line-height: 2rem;
+}
+
+.book-details h2 {
+   font-size: 2rem;
+   padding-bottom: 25px;
+}
+
+.book-details img {
+   width: 400px;
+   height: 550px;
+}
