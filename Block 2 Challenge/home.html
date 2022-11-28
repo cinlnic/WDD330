@@ -6,9 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Digital Bookshelf</title>
-   <link rel="stylesheet" href="reset.css">
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="mobile.css">
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -16,33 +15,103 @@
       <nav class="navbar">
          <a href='home.html' class="nav-title">Digital Bookshelf</a>
          <ul class="nav-menu">
-            <li class="nav-item"><a href="addbook.html" class="nav-link">Add a Book</a></li>
+            <!-- <li class="nav-item"><a href="addbook.html" class="nav-link">Add a Book</a></li> -->
             <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
          </ul>
-         <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-         </div>
       </nav>
    </header>
    <main class="main-home">
+      <div id="home-page" class="home-page">
+         <section class="search">
+            <div class="search-by">
+               <input type="text">
+               <select name="searchBy" id="searchBy">
+                  <option value="isbn">ISBN</option>
+                  <option value="title">Title</option>
+                  <option value="Author">Author</option>
+               </select>
+               <button id="search">Search</button>
+            </div>
+            <button id="filter">Filter</button>
+            <button id="add-button" class="add-button">Add a New Book</button>
+         </section>
+         <section class="filter hidden">
+            <div class="genre-list">
+               <h3>Genre</h3>
+               <label for="fiction">
+                  <input type="radio" id="fiction" name="genre" value="fiction">
+                  Fiction</label>
+
+               <label for="non-fiction">
+                  <input type="radio" id="non-fiction" name="genre" value="non-fiction">
+                  Non-fiction</label>
+
+               <label for="historical">
+                  <input type="radio" id="historical" name="genre" value="historical">
+                  Historical</label>
+
+               <label for="religious">
+                  <input type="radio" id="religious" name="genre" value="religious">
+                  Religious</label>
+
+               <label for="mystery">
+                  <input type="radio" id="mystery" name="genre" value="mystery">
+                  Mystery</label>
+
+               <label for="fantasy">
+                  <input type="radio" id="fantasy" name="genre" value="fantasy">
+                  Fantasy</label>
+
+               <label for="romance">
+                  <input type="radio" id="romance" name="genre" value="romance">
+                  Romance</label>
+
+            </div>
+            <hr>
+            <div class="reading-level-list">
+               <h3>Reading Level</h3>
+               <label for="adult">
+                  <input type="radio" id="adult" name="genre" value="adult">
+                  Adult</label>
+
+               <label for="teen">
+                  <input type="radio" id="teen" name="genre" value="teen">
+                  Teen</label>
+
+               <label for="middle-school">
+                  <input type="radio" id="middle-school" name="genre" value="middle-school">
+                  Middle-School</label>
+
+               <label for="child">
+                  <input type="radio" id="child" name="genre" value="child">
+                  Children</label>
+            </div>
+            <button class="submit-filter">Submit</button>
+         </section>
+         <section id="books"></section>
+         <button>Previous</button>
+         <button>Next</button>
+      </div>
+      <div id="add-page" class="add-page hidden">
+         <h2>Add a Book</h2>
       <section class="search">
-         <div class="search-by">
-            <input type="text">
-            <select name="searchBy" id="searchBy">
-               <option value="isbn">ISBN</option>
-               <option value="title">Title</option>
-               <option value="Author">Author</option>
-            </select>
-            <button id="search">Search</button>
-         </div>
-         <button id="filter">Filter</button>
-         <a href=addbook.html><button class="add-button">Add a New Book</button></a>
+         <label for="add">Please enter the ISBN:</label>
+         <input type="text" id="add-isbn">
+         <button id="search-isbn">Search</button>
       </section>
-      <section class="filter">
+      <form class="search-results">
+         <section class="search-info">
+            <!-- <img id="book-cover" src="./images/kelly-sikkema-PP-cC4tTOzQ-unsplash.jpg"> -->
+            <div class="search-titles">
+               <h3 id="isbn">ISBN: <span class="search-text"></span></h3>
+               <h3 id="title">Title: <span class="search-text"></span></h3>
+               <h3 id="author">Author: <span class="search-text"></span></h3>
+               <h3 id="pages"># of Pages: <span class="search-text"></span></h3>
+            </div>
+            
+         </section>
          <div class="genre-list">
-            <h3>Genre</h3>
+            <h3>Genre:</h3>
             <label for="fiction">
                <input type="radio" id="fiction" name="genre" value="fiction">
                Fiction</label>
@@ -72,76 +141,39 @@
                Romance</label>
 
          </div>
-         <hr>
+
          <div class="reading-level-list">
-            <h3>Reading Level</h3>
+            <h3>Reading Level:</h3>
             <label for="adult">
-               <input type="radio" id="adult" name="genre" value="adult">
+               <input type="radio" id="adult" name="reading-level" value="adult">
                Adult</label>
 
             <label for="teen">
-               <input type="radio" id="teen" name="genre" value="teen">
+               <input type="radio" id="teen" name="reading-level" value="teen">
                Teen</label>
 
             <label for="middle-school">
-               <input type="radio" id="middle-school" name="genre" value="middle-school">
+               <input type="radio" id="middle-school" name="reading-level" value="middle-school">
                Middle-School</label>
 
             <label for="child">
-               <input type="radio" id="child" name="genre" value="child">
+               <input type="radio" id="child" name="reading-level" value="child">
                Children</label>
          </div>
-         <button class="submit-filter">Submit</button>
-      </section>
-      <section id="books">
-         <a href="book-details.html" class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </a>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
+     
+         <label for="comments">Comments:</label>
+         <textarea name="comments" id="comments"></textarea>
+         <div class="center-button">
+            <button id="add" class="add-button">Add Book</button>
          </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-         <div class="single-book">
-            <img src="../images/html5-logo.png" alt="book cover">
-            <p class="book-title">Book Title</p>
-         </div>
-      </section>
-      <button>Previous</button>
-      <button>Next</button>
+         
+      </form>
+      </div>
    </main>
    <footer>
       <p>&copy; Cindi Nichols 2022</p>
    </footer>
 </body>
-<script src="nav.js"></script>
+<script src="./js/main.js" type="module"></script>
 
 </html>

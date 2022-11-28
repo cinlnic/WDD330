@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Antique+Soft&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto$family=Shadows+Into+Light&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shadows+Into+Light&display=swap');
 
 body {
    font-family: 'Roboto', sans-serif;
@@ -19,6 +19,9 @@ h6 {
 }
 
 header {
+   position: sticky;
+   top: 0;
+   width: 100%;
    background-color: #335c67;
    font-family: 'Shadows Into Light', cursive;
 }
@@ -41,19 +44,6 @@ footer {
    justify-content: space-between;
    align-items: center;
    padding: 1rem 1.5rem;
-}
-
-.hamburger {
-   display: none;
-}
-
-.bar {
-   display: block;
-   width: 25px;
-   height: 3px;
-   margin: 5px auto;
-   transition: all 0.3s ease-in-out;
-   background-color: #e09f3e;
 }
 
 .nav-menu {
@@ -82,12 +72,22 @@ footer {
    color: #e09f3e;
 }
 
+.hidden {
+   display: none;
+}
+
+.home-page {
+   text-align: center;
+}
+
 .search {
    width: 100%;
    height: 100px;
    display: inline-flex;
    justify-content: center;
    align-items: center;
+   column-gap: 10px;
+   margin-bottom: 25px;
 }
 
 input[type='text'] {
@@ -172,6 +172,7 @@ button:focus, .single-book:focus {
 
 .genre-list label, .reading-level-list label {
    margin-right: 15px;
+   white-space:nowrap;
 }
 
 .genre-list,
@@ -192,6 +193,7 @@ button:focus, .single-book:focus {
 }
 
 .single-book{
+   width: 200px;
    padding: 1rem;
    border: 2px solid #9e2a2b;
    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
@@ -199,12 +201,11 @@ button:focus, .single-book:focus {
    border-bottom-right-radius: 125px 5px;
    border-top-left-radius: 155px 5px;
    border-top-right-radius: 5px 125px;
-
+   text-align: center;
 }
 
 .single-book img {
    height: 150px;
-   width: 150px;
    padding: 1rem;
 }
 
@@ -214,7 +215,7 @@ button:focus, .single-book:focus {
 }
 
 /*Add a Book Page CSS*/
-.main-add {
+.add-page {
    max-width: 60%;
    margin: 25px auto;
    border: 2px solid #9e2a2b;
@@ -226,7 +227,7 @@ button:focus, .single-book:focus {
    text-align: center;
 }
 
-.main-add h2 {
+.add-page h2 {
    font-size: 2.5rem;
    font-weight: bold;
    color: #9e2a2b;
@@ -241,7 +242,26 @@ button:focus, .single-book:focus {
 }
 
 .search-results h3 {
+   font-size: 1.25rem;
    margin-top: 25px;
+}
+
+#isbn {
+   margin-top: 0;
+}
+
+.search-info {
+   display: flex;
+   justify-content: space-between;
+}
+
+.search-text {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.25rem;
+}
+
+#book-cover {
+   height: 250px;
 }
 
 label[for="comments"] {
@@ -259,6 +279,7 @@ textarea {
    border-top-left-radius: 255px 15px;
    border-top-right-radius: 15px 225px;
    resize: none;
+   padding: 15px;
 }
 
 .add-button {
@@ -267,9 +288,14 @@ textarea {
    border-color: #41403e;
 }
 
+.center-button {
+   display: flex;
+   justify-content: center;
+}
+
 /*Book details page CSS*/
 .main-details {
-   width: 50%;
+   width: 75%;
    margin: 25px auto;
 }
 
