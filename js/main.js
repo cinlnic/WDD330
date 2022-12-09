@@ -42,6 +42,10 @@ function createIndex() {
          label: "Week 10",
          url: "Week 10/week10.html"
       },
+      {
+         label: "Digital Bookshelf",
+         url: "Block 2 Challenge/home.html"
+      },
    ]
 
    for (let i = 0; i < index.length; i++) {

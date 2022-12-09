@@ -72,10 +72,6 @@ footer {
    color: #e09f3e;
 }
 
-.hidden {
-   display: none;
-}
-
 .home-page {
    text-align: center;
 }
@@ -87,7 +83,11 @@ footer {
    justify-content: center;
    align-items: center;
    column-gap: 10px;
-   margin-bottom: 25px;
+   margin: 25px 0;
+}
+
+.search-by input {
+   width: 250px;
 }
 
 input[type='text'] {
@@ -184,6 +184,10 @@ button:focus, .single-book:focus {
    margin: 15px auto;
 }
 
+.filter button {
+   margin-bottom: 20px;
+}
+
 #books {
    display: flex;
    flex-wrap: wrap;
@@ -255,13 +259,20 @@ button:focus, .single-book:focus {
    justify-content: space-between;
 }
 
-.search-text {
-   font-family: 'Roboto', sans-serif;
+.search-titles p {
+   font-family: 'Shadows Into Light', cursive;
    font-size: 1.25rem;
+   letter-spacing: .1em;
+}
+
+.search-titles span {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.5rem;
 }
 
 #book-cover {
-   height: 250px;
+   width: 200px;
+   margin-left: 25px;
 }
 
 label[for="comments"] {
@@ -283,6 +294,7 @@ textarea {
 }
 
 .add-button {
+   margin-left: 75px;
    background-color: #9e2a2b;
    color:#fff;
    border-color: #41403e;
@@ -293,25 +305,65 @@ textarea {
    justify-content: center;
 }
 
+.error {
+   color: #9e2a2b;
+   font-size: 1.5rem;
+   margin-bottom: 25px;
+   line-height: 2.5rem;
+}
+
 /*Book details page CSS*/
-.main-details {
+.book-details {
    width: 75%;
    margin: 25px auto;
 }
 
-.book-details {
+.book-detail-items {
+   max-width: 65%;
    display: flex;
    justify-content: space-between;
-   margin: 25px 15px;
-   line-height: 2rem;
+   margin: 60px 15px;
+   line-height: 2.5rem;
+   font-size: 1.25rem;
 }
 
-.book-details h2 {
-   font-size: 2rem;
+.book-detail-items h2 {
+   font-size: 2.25rem;
    padding-bottom: 25px;
 }
 
-.book-details img {
-   width: 400px;
-   height: 550px;
+.book-detail-items img {
+   height: 300px;
+}
+
+.book-text span {
+   font-family: 'Shadows Into Light', cursive;
+   font-size: 1.25rem;
+   letter-spacing: .1em;
+}
+
+#remove {
+   background-color: #9e2a2b;
+   color: #fff;
+}
+
+/*Pagination*/
+.pagination-container {
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination-container button {
+ margin-left: 5px;
+}
+ 
+#pagination-numbers button.active {
+  color: #fff;
+  background: #e09f3e;
+}
+
+.hidden {
+   display: none;
 }
